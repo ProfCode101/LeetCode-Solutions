@@ -1,0 +1,13 @@
+class Solution(object):
+    def removeElement(self, nums, val):
+        i = 0
+        n = len(nums)
+
+        while i < n-1:
+            if nums[i] == val:
+                nums[i] = nums[n-1]
+                n -= 1
+            else:
+                i+=1
+
+        return n
